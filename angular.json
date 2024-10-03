@@ -20,6 +20,7 @@
             "outputPath": "dist/portfolio-landing-page",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/portfolio-landing-page/",
             "polyfills": [
               "zone.js"
             ],
