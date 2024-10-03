@@ -3,7 +3,7 @@ name: Deploy Angular App
 on:
   push:
     branches:
-      - main  # Ou a branch que você está usando
+      - master  # Monitorando a branch master para o push
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'  # Use a versão correta do Node.js
+          node-version: '20'  # Certifique-se de usar a versão 20 do Node.js
 
       - name: Install dependencies
         run: npm install
@@ -28,4 +28,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/portfolio-landing-page  # Certifique-se de que o caminho está correto
+          publish_branch: master  # Usando a branch master
+          publish_dir: ./dist/portfolio-landing-page  # Certifique-se de que o caminho de build está correto
+          destination_dir: docs  # Publicar dentro da pasta /docs na branch master
