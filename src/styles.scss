@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #4c6baf;
+$secondary-color: #FFC107;
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: $primary-color;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #4CAF50, #FFC107);
+  color: white;
+  text-align: center;
+  flex-direction: column;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 40px 0;
+}
