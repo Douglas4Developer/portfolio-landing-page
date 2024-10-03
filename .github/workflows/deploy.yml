@@ -30,4 +30,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages  # Publicando na branch gh-pages
           publish_dir: ./dist/portfolio-landing-page  # Certifique-se de que o caminho de build está correto
-          destination_dir: docs  # Publicar dentro da pasta /docs na branch master
+          destination_dir: docs   # Publicar dentro da pasta /docs na branch master
